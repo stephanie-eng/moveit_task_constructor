@@ -1,6 +1,13 @@
 cmake_minimum_required(VERSION 3.5)
 project(moveit_task_constructor_visualization)
 
+if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
+  add_compile_options(-W -Wall -Wextra
+      -Wwrite-strings -Wunreachable-code -Wpointer-arith
+      -Winit-self -Wredundant-decls
+      -Wno-unused-parameter -Wno-unused-function -g)
+endif()
+
 find_package(ament_cmake REQUIRED)
 find_package(Boost REQUIRED)
 find_package(moveit_core REQUIRED)
