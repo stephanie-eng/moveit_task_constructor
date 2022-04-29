@@ -5,7 +5,7 @@ if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-W -Wall -Wextra
       -Wwrite-strings -Wunreachable-code -Wpointer-arith
       -Winit-self -Wredundant-decls
-      -Wno-unused-parameter -Wno-unused-function -g)
+      -Wno-unused-parameter -Wno-unused-function)
 endif()
 
 find_package(ament_cmake REQUIRED)
